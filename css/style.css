@@ -18,16 +18,15 @@
 
 body {
   background-color: var(--colors-blue);
+  height: 100vh;
+  overflow: hidden;
 }
 
 header {
   width: 100%;
 }
 
-.nav__lateral {
-  display: none;
-}
-
+/* Navbar */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -66,8 +65,14 @@ header {
   width: 100%;
 }
 
+.nav__lateral {
+  display: none;
+}
+
 main {
-  padding: 30px;
+  position: relative;
+  width: 100%;
+  padding: 24px;
 }
 
 .main-title {
@@ -83,12 +88,12 @@ main {
 
 .section {
   width: 100%;
-  max-width: 600px;
-  height: 400px;
+  max-width: 400px;
+  height: 350px;
   padding: 20px;
   background-color: var(--colors-lighting);
   border-radius: 10px;
-  margin: 70px auto;
+  margin: 40px auto 70px;
 }
 
 .section-content__title,
@@ -136,10 +141,15 @@ main {
 }
 
 .section--code {
+  width: 100%;
+  max-width: 400px;
   height: auto;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: var(--colors-lighting);
   color: var(--colors-white);
   overflow: hidden;
-  margin-bottom: 0;
 }
 
 .section code {
@@ -191,14 +201,18 @@ main {
 
 .message-alert {
   position: absolute;
-  top: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 30px;
+  top: 63%;
+
+  width: 300px;
+  border: 1px solid #d45bd2;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
   font-family: var(--title-font);
   font-weight: 700;
   color: var(--colors-pink);
-  animation: messageShow 4s ease-in-out;
+  /* animation: messageShow 4s ease-in-out; */
 }
 
 @keyframes messageShow {
@@ -262,16 +276,16 @@ main {
   }
   .hbg-button {
     display: block;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    transform: translateX(-100%);
     width: 40px;
     height: 40px;
     border: none;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     background-color: #0e0d0d;
-    position: absolute;
-    top: 2rem;
-    left: 0;
-    transform: translateX(-100%);
     cursor: pointer;
   }
 

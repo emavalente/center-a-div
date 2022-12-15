@@ -109,11 +109,12 @@ function copyToClipboard(elemento) {
 function copyAlert() {
   const message = document.createElement("P");
   message.textContent = "Copied to Clipboard!";
-  message.classList.add("message-alert");
-  message.classList.add("message-alert--show");
+  message.classList.add("message-alert", "message-alert--show");
   const main = document.querySelector("main");
-  main.appendChild(message);
-  setTimeout(() => {
-    message.remove();
-  }, 4000);
+
+  main.insertBefore(message, main.children[3]);
+  console.log(main.children);
+  // setTimeout(() => {
+  //   message.remove();
+  // }, 4000);
 }
