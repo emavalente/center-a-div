@@ -112,9 +112,9 @@ function copyAlert() {
   message.classList.add("message-alert", "message-alert--show");
   const main = document.querySelector("main");
 
-  main.insertBefore(message, main.children[3]);
+  main.insertBefore(message, main.children[2]);
   console.log(main.children);
-  // setTimeout(() => {
-  //   message.remove();
-  // }, 4000);
+  setTimeout(() => {
+    message.remove();
+  }, 3000);
 }
