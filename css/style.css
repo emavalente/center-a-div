@@ -212,20 +212,16 @@ main {
   font-family: var(--title-font);
   font-weight: 700;
   color: var(--colors-pink);
-  animation: messageShow 3s ease-in-out;
+  animation: messageShow 2s ease-in-out;
 }
 
 @keyframes messageShow {
   0% {
     opacity: 0;
-    transform: translate(-50%, 20%);
-  }
-  30% {
-    opacity: 1;
+    transform: translate(-50%, 60%);
   }
   100% {
-    transform: translateY(-50%, -20%);
-    opacity: 0;
+    opacity: 1;
   }
 }
 

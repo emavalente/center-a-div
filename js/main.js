@@ -116,5 +116,5 @@ function copyAlert() {
   console.log(main.children);
   setTimeout(() => {
     message.remove();
-  }, 3000);
+  }, 4000);
 }
